@@ -1,13 +1,20 @@
-phrase = prompt("Enter a phrase");
-document.write("You entered - ", phrase);
+// IT121 HW2 by Shiro 10/6/2024
+// This is a simple web page that translates a phrase into pig latin.
 
-// Your pig-latin translation code here
+// get the phrase from the user
 let phrase = prompt("Enter a phrase");
 document.write("You entered: " + phrase + "<br>");
 
-// Your Pig Latin translation code here
-
+// if a word begins with a vowel, add "way" to the end
 if (phrase.charAt(0) === "a" || phrase.charAt(0) === "e" || phrase.charAt(0) === "i" || phrase.charAt(0) === "o" || phrase.charAt(0) === "u") {
-  document.write(phrase + "way");
-} 
-} 
+    document.write(phrase + "way");
+// if a word begins with one consonant, move that letter to the end and append 'ay
+} else {
+    //
+    if (phrase.charAt(1) === "a" || phrase.charAt(1) === "e" || phrase.charAt(1) === "i" || phrase.charAt(1) === "o" || phrase.charAt(1) === "u") {
+      document.write(phrase.substring(1) + phrase.charAt(0) + "ay");
+    }
+    //if a word begins with two consonants, move both letters to the end and append 'ay':
+    else
+    document.write(phrase.substring(2) + phrase.charAt(0) + phrase.charAt(1) +"ay");
+};
