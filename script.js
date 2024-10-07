@@ -8,9 +8,12 @@ document.write("You entered: " + phrase + "<br>");
 // if a word begins with a vowel, add "way" to the end
 if (phrase.charAt(0) === "a" || phrase.charAt(0) === "e" || phrase.charAt(0) === "i" || phrase.charAt(0) === "o" || phrase.charAt(0) === "u") {
     document.write(phrase + "way");
+// if no word
+} else if (phrase.trim() === '') {
+    document.write("Please enter a word");
 // if a word begins with one consonant, move that letter to the end and append 'ay
 } else {
-    //
+    // if a word begins with one consonant and a vowel, move both to the end and append 'ay'
     if (phrase.charAt(1) === "a" || phrase.charAt(1) === "e" || phrase.charAt(1) === "i" || phrase.charAt(1) === "o" || phrase.charAt(1) === "u") {
       document.write(phrase.substring(1) + phrase.charAt(0) + "ay");
     }
