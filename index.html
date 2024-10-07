@@ -1,28 +1,28 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
-</head>
-
-
-
-</html>
-
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pig Latin translator</title>
+    <title>Pig Latin Translator</title>
 </head>
 <body>
 
-    <h1>Pig Latin Translator</h1>
-    <script src="script.js"></script>
+<script>
+    let phrase = prompt("Enter a phrase");
+    document.write("You entered: " + phrase + "<br>");
 
+    // Your Pig Latin translation code here
+
+    if (phrase.charAt(0) === "a" || phrase.charAt(0) === "e" || phrase.charAt(0) === "i" || phrase.charAt(0) === "o" || phrase.charAt(0) === "u") {
+        document.write(phrase + "way");
+    } else {
+        if (phrase.charAt(1) === "a" || phrase.charAt(1) === "e" || phrase.charAt(1) === "i" || phrase.charAt(1) === "o" || phrase.charAt(1) === "u") {
+          document.write(phrase.substring(1) + phrase.charAt(0) + "ay");
+        }
+        else
+        document.write(phrase.substring(2) + phrase.charAt(0) + phrase.charAt(1) +"ay");
+    };
+
+</script>
 
 </body>
 </html>
